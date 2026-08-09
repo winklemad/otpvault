@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:typed_data';
 import 'package:cryptography/cryptography.dart';
 import 'crypto.dart';
@@ -63,6 +64,13 @@ class Keybag {
     final dekBytes = await dek.extractBytes();
     final wrapped = await VaultCrypto.encrypt(kek, Uint8List.fromList(dekBytes));
     return (wrapped, saltPw);
+  }
+
+  /// Proof of DEK possession, sent to authorize a recovery reset.
+  /// The server stores this at signup and compares on reset.
+  Future<String> resetTag() async {
+    final mac = await Hmac.sha256().calculateMac(utf8.encode('reset'), secretKey: dek);
+    return mac.bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
   }
 
   /// Generate a high-entropy recovery key, formatted for the user to write
