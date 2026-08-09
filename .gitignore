@@ -7,6 +7,10 @@ node_modules/
 dist/
 .wrangler/
 build/
+.vercel/
+app/flutter/          # Flutter SDK cloned during a Vercel/CI build
+.dart_tool/
+.flutter-plugins*
 
 # os
 .DS_Store
