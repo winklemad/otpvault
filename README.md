@@ -1,6 +1,6 @@
-# 2FA Authenticator (working name)
+# OTPVault
 
-Open-source, cross-platform TOTP authenticator with **end-to-end-encrypted cloud sync**, running entirely on **Cloudflare's free tier**. No ads, no paid tier — a free, trustworthy utility.
+Open-source, cross-platform TOTP authenticator with **end-to-end-encrypted cloud sync**, running entirely on **Cloudflare's free tier**. Free for individuals, forever — no ads, no lifetime trap.
 
 - **[PLAN.md](./PLAN.md)** — full design: positioning, architecture, security model, Cloudflare sizing, roadmap.
 - **[backend/](./backend)** — Cloudflare Worker (D1 + R2) sync API. Zero-knowledge: only ciphertext.
@@ -22,3 +22,6 @@ See each folder's README for full setup.
 
 ## Status
 Planning + scaffold. Phase 0 target: a local-only authenticator (no backend) — useful on its own and the fastest thing to ship.
+
+## License
+[AGPL-3.0](./LICENSE) — free to use and modify; anyone distributing a modified version (including as a hosted service) must release their source under the same terms. The copyright holder reserves the right to offer separate commercial licenses.

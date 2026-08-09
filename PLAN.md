@@ -1,6 +1,6 @@
-# 2FA Authenticator with Free Cloud Sync — Project Plan
+# OTPVault — 2FA Authenticator with Free Cloud Sync — Project Plan
 
-> Working name: **(TBD)** · Status: planning · Last updated: 2026-08-08
+> Name: **OTPVault** · License: **AGPL-3.0** · Status: planning · Last updated: 2026-08-09
 
 An open-source, cross-platform TOTP authenticator with **end-to-end-encrypted cloud sync**, run entirely on **Cloudflare's free tier**. No ads, no paid tier, no lifetime deal — a free, trustworthy utility and a credibility/portfolio project.
 
@@ -203,7 +203,7 @@ Support QR + `otpauth://` import **and** export so users can migrate in from (an
 ---
 
 ## Open questions / decisions to make
-- [ ] Project name + license (MIT or GPL-3.0?).
+- [x] Project name + license — **OTPVault**, **AGPL-3.0** (dual-license option kept for corporate use).
 - [ ] Password-only auth vs. passkeys from day one.
 - [ ] Web/PWA-first vs. mobile-first client.
 - [ ] Offer a recovery key, or rely on the standard export/backup?
