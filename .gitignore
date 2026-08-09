@@ -1,0 +1,12 @@
+# secrets
+**/.dev.vars
+*.env
+
+# deps / build
+node_modules/
+dist/
+.wrangler/
+build/
+
+# os
+.DS_Store

@@ -1,0 +1,27 @@
+name: twofa
+description: Open-source 2FA authenticator with end-to-end-encrypted cloud sync.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  crypto: ^3.0.6              # HMAC-SHA1/256/512 for TOTP
+  cryptography: ^2.7.0        # Argon2id KDF + XChaCha20-Poly1305 vault encryption
+  flutter_secure_storage: ^9.2.4  # Keychain / Keystore / DPAPI for the derived key
+  local_auth: ^2.3.0         # Face ID / Touch ID / Windows Hello / Android biometrics
+  mobile_scanner: ^6.0.2     # QR scanning (camera) on all platforms
+  http: ^1.2.2               # sync client
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+# Platform targets are added with `flutter create . --platforms=ios,android,macos,windows,web`
+# after dropping these lib/ files into a fresh Flutter project.

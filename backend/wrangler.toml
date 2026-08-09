@@ -1,0 +1,17 @@
+name = "twofa-sync"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+# D1: create with `wrangler d1 create twofa`, then paste the id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "twofa"
+database_id = "REPLACE_WITH_ID_FROM_wrangler_d1_create"
+
+# R2: create with `wrangler r2 bucket create twofa-vaults`
+[[r2_buckets]]
+binding = "VAULTS"
+bucket_name = "twofa-vaults"
+
+# Secret (do NOT commit): `wrangler secret put JWT_SECRET`
+# Local dev reads it from .dev.vars
